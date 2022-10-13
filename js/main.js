@@ -23,6 +23,9 @@ $(function(){
     resizeImage('.news-cnt .left .img', 385/592);
     resizeImage('.news-cnt .right .item .img', 181/282);
     resizeImage('.cus-cnt .item',165/230);
+    resizeImage('.banner .img', 430/1365);
+    resizeImage('._ab-cnt .img',340/585);
+    resizeImage('.core-cnt .it', 260/370)
     if($(window).width() < 767){
         resizeImage('.slider .img',9/16);
     }
