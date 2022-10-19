@@ -95,7 +95,8 @@ $(function () {
   resizeImage('._news-top .img', 380 / 590);
   resizeImage('.news-item .img', 181 / 282);
   resizeImage('.right .news-item .img', 181 / 282);
-  // resizeImage('.core-cnt .item', 370/208)
+  resizeImage('.newsitem .img', 181/282);
+  resizeImage('.lst-newsest .item .img', 1)
 
   if ($(window).width() < 767) {
     resizeImage('.slider .img', 9 / 16);
