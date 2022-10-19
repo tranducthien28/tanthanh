@@ -1725,3 +1725,73 @@ footer {
     }
   }
 }
+
+//! tin tức 2
+.list-tab{
+    margin: 25px 0 40px;
+    ul{
+        display: flex;
+        align-items: center;
+        li{
+            margin-right: 15px;
+            a{
+                font-size: 16px;
+                font-family: gil-regu;
+                color: #333333;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+._news-event{
+    .title{
+        text-align: start;
+        margin-bottom: 20px;
+        &::before{
+            left: 0;
+            transform: initial;
+        }
+        &::after{
+            left: 51px;
+        }
+    }
+    .container{
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        .left{
+            width: calc(100% - 360px);
+            .newsitem{
+                display: flex;
+                align-items: flex-start;
+                gap: 25px;
+                .img{
+                    width: 30%;
+                }
+                .txt{
+                    width: calc(70% - 25px);
+                    h3{
+                        font-size: 20px;
+                        font-family: gil-bold;
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        font-size: 16px;
+                        font-family: gil-regu;
+                        line-height: 1.5;
+                        @include _max-text-2();
+                        margin-bottom: 60px;
+                    }
+                    ._see-more{
+                        border: 1px solid $--main-color;
+                        color: $--main-color;
+                        margin: initial;
+                    }
+                }
+            }
+        }
+        .right{
+            width: 320px;
+        }
+    }
+}

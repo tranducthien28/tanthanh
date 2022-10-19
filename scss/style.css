@@ -1631,4 +1631,76 @@ footer .ft-bot p {
   background: url("../images/share.jpg") no-repeat;
 }
 
+.list-tab {
+  margin: 25px 0 40px;
+}
+.list-tab ul {
+  display: flex;
+  align-items: center;
+}
+.list-tab ul li {
+  margin-right: 15px;
+}
+.list-tab ul li a {
+  font-size: 16px;
+  font-family: gil-regu;
+  color: #333333;
+  margin-right: 10px;
+}
+
+._news-event .title {
+  text-align: start;
+  margin-bottom: 20px;
+}
+._news-event .title::before {
+  left: 0;
+  transform: initial;
+}
+._news-event .title::after {
+  left: 51px;
+}
+._news-event .container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+._news-event .container .left {
+  width: calc(100% - 360px);
+}
+._news-event .container .left .newsitem {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+._news-event .container .left .newsitem .img {
+  width: 30%;
+}
+._news-event .container .left .newsitem .txt {
+  width: calc(70% - 25px);
+}
+._news-event .container .left .newsitem .txt h3 {
+  font-size: 20px;
+  font-family: gil-bold;
+  margin-bottom: 20px;
+}
+._news-event .container .left .newsitem .txt p {
+  font-size: 16px;
+  font-family: gil-regu;
+  line-height: 1.5;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  margin-bottom: 60px;
+}
+._news-event .container .left .newsitem .txt ._see-more {
+  border: 1px solid #f36f21;
+  color: #f36f21;
+  margin: initial;
+}
+._news-event .container .right {
+  width: 320px;
+}
+
 /*# sourceMappingURL=style.css.map */
