@@ -139,4 +139,8 @@ $(function () {
     $(this).parents('li').children('.submenu').slideToggle();
     $(this).parents('li').toggleClass('active');
   });
+
+  $('.table-content .button .see-more').click(() => {
+    $('.table-content').addClass('active');
+  });
 });

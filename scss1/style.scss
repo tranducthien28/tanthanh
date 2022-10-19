@@ -1,0 +1,248 @@
+// !san pham 2
+@import '../scss/style.scss';
+
+.content .container {
+  display: flex;
+  gap: 25px;
+  padding-top: 50px;
+
+  .section-left {
+    width: calc(80% - 25px);
+
+    .title {
+      text-align: left;
+      margin-bottom: 30px;
+
+      &::after {
+        left: 0;
+      }
+
+      &::before {
+        transform: translateX(100%);
+        left: 2px;
+      }
+    }
+
+    .section-body {
+      p {
+        font-family: 'gil-regu';
+        font-size: 16px;
+        margin-bottom: 34px;
+      }
+
+      .table-content {
+        background-color: #f5f5f5;
+        padding: 30px 22px;
+        border-radius: 5px;
+        border: 1px solid $--border-color;
+        position: relative;
+        margin-bottom: 40px;
+
+        h2 {
+          font-family: 'gil-xbold';
+          font-size: 20px;
+          text-transform: uppercase;
+          text-align: center;
+          margin-bottom: 18px;
+        }
+
+        .lists-tables-content {
+          height: 120px;
+          transition: all 0.5s linear;
+          overflow: hidden;
+          a {
+            font-family: 'gil-bold';
+            font-size: 16px;
+            color: #3a60a3;
+            margin-bottom: 12px;
+            display: block;
+          }
+
+          li ul a {
+            font-family: 'gil-regu';
+            padding-left: 20px;
+          }
+        }
+
+        .button {
+          position: absolute;
+          bottom: -1px;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: all 0.5s linear;
+          background: linear-gradient(
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0.7),
+            #fff
+          );
+          width: 101%;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &.active {
+          .lists-tables-content {
+            height: 100%;
+          }
+
+          .button {
+            display: none;
+          }
+        }
+      }
+
+      .list-products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 28px;
+
+        .product-item {
+          max-width: 210px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 30px 15px 23px;
+          border: 1px solid $--border-color;
+          border-radius: 5px;
+          transition: all 0.5s linear;
+          overflow: hidden;
+
+          .product-img {
+            transition: all 0.5s linear;
+            margin-bottom: 36px;
+          }
+          .protduct-title {
+            font-family: 'gil-semi';
+            font-size: 16px;
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            transition: all 0.5s linear;
+          }
+
+          a {
+            color: #ff6600;
+            transition: all 0.5s linear;
+
+            &:hover {
+              color: red;
+            }
+          }
+
+          &:hover {
+            border-color: #ff6600;
+
+            .product-img {
+              transform: scale(1.05);
+            }
+
+            .protduct-title {
+              color: #ff6600;
+            }
+          }
+        }
+      }
+
+      .list-page {
+        margin-bottom: 35px;
+      }
+    }
+  }
+  .section-right {
+    width: 20%;
+
+    .trademark-title {
+      font-family: 'gil-xbold';
+      font-size: 16px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #406ab3;
+      width: 100%;
+      height: 42px;
+      line-height: 42px;
+      border-radius: 5px;
+      margin-bottom: 12px;
+    }
+
+    .list-categorys {
+      padding: 7px 14px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+
+      li {
+        border-bottom: 1px solid $--border-color;
+        padding-left: 5px;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          text-transform: uppercase;
+          gap: 14px;
+          color: #333;
+          height: 38px;
+
+          p {
+            font-family: 'gil-semi';
+            font-size: 16px;
+          }
+        }
+
+        &:last-child {
+          border-color: transparent;
+        }
+
+        &.active {
+          a p {
+            color: #406ab3;
+          }
+        }
+      }
+    }
+  }
+}
+
+.person-support {
+  background-color: #f6f6f6;
+  padding-top: 42px;
+
+  .title {
+    margin-bottom: 44px;
+  }
+
+  .list-persons {
+    display: flex;
+    flex-wrap: wrap;
+
+    .person-item {
+      display: flex;
+      min-width: 400px;
+      margin-bottom: 52px;
+      gap: 12px;
+
+      .person-avt {
+        width: 106px;
+        height: 106px;
+        border-radius: 50%;
+        border: 1px solid #ff6600;
+        overflow: hidden;
+      }
+
+      .person-body {
+        .item-text {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          .icon {
+            width: 14px;
+          }
+        }
+      }
+    }
+  }
+}
