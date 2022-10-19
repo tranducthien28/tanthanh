@@ -246,3 +246,27 @@
     }
   }
 }
+
+//! San pham 3
+.prRating span {
+  display: flex;
+  align-items: center;
+}
+.prRating i {
+  background-image: url(../images/ic-start-1.png);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: block;
+  margin-right: 2.5px;
+}
+
+.prRating i.starLight.active {
+  background-image: url(../images/ic-star.png);
+}
+.prRating .starHaft {
+  background-position-x: -20px;
+}
+.prRating .starDark {
+  background-position-x: -39px;
+}
