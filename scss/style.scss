@@ -995,6 +995,7 @@ footer {
     position: absolute;
     bottom: 55px;
     left: 50%;
+    margin-bottom: 26px;
     transform: translateX(-50%);
     text-transform: uppercase;
 
@@ -1726,72 +1727,82 @@ footer {
   }
 }
 
-//! tin tức 2
-.list-tab{
+// tin tuc 2
+.list-tab {
     margin: 25px 0 40px;
-    ul{
+    ul {
         display: flex;
         align-items: center;
-        li{
+        li {
             margin-right: 15px;
-            a{
+            a {
                 font-size: 16px;
                 font-family: gil-regu;
                 color: #333333;
                 margin-right: 10px;
-            }
-        }
-    }
-}
-._news-event{
-    .title{
+              }
+          }
+      }
+  }  
+  ._news-event {
+    .title {
         text-align: start;
         margin-bottom: 20px;
-        &::before{
+        &::before {
             left: 0;
             transform: initial;
         }
-        &::after{
+        &::after {
             left: 51px;
         }
     }
-    .container{
+    .container {
         display: flex;
         align-items: flex-start;
         gap: 40px;
-        .left{
+        .left {
             width: calc(100% - 360px);
-            .newsitem{
+            .newsitem {
                 display: flex;
                 align-items: flex-start;
                 gap: 25px;
-                .img{
+                padding-bottom: 20px;
+                border-bottom: 1px solid $--border-color;
+                .img {
                     width: 30%;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
                 }
-                .txt{
+                .txt {
                     width: calc(70% - 25px);
-                    h3{
+                    h3 {
                         font-size: 20px;
                         font-family: gil-bold;
                         margin-bottom: 20px;
                     }
-                    p{
+                    p {
                         font-size: 16px;
                         font-family: gil-regu;
-                        line-height: 1.5;
                         @include _max-text-2();
-                        margin-bottom: 60px;
+                        margin-bottom: 35px;
                     }
-                    ._see-more{
-                        border: 1px solid $--main-color;
-                        color: $--main-color;
+                    ._see-more {
+                        border: 1px solid #f36f21;
+                        color: #f36f21;
                         margin: initial;
-                    }
+                      }
                 }
             }
         }
-        .right{
+        .right {
             width: 320px;
         }
-    }
-}
+      }
+  }
+  
+  
