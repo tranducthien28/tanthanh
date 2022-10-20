@@ -95,8 +95,8 @@ $(function () {
   resizeImage('._news-top .img', 380 / 590);
   resizeImage('.news-item .img', 181 / 282);
   resizeImage('.right .news-item .img', 181 / 282);
-  resizeImage('.newsitem .img', 181/282);
-  resizeImage('.lst-newsest .item .img', 1)
+  resizeImage('.newsitem .img', 181 / 282);
+  resizeImage('.lst-newsest .item .img', 1);
 
   if ($(window).width() < 767) {
     resizeImage('.slider .img', 9 / 16);
@@ -143,5 +143,71 @@ $(function () {
 
   $('.table-content .button .see-more').click(() => {
     $('.table-content').addClass('active');
+  });
+
+  $('.product-details .fotorama').fotorama({
+    width: '100%',
+    maxwidth: '100%',
+    ratio: 1,
+    allowfullscreen: true,
+    nav: 'thumbs',
+  });
+
+  function RenderTableOfContent() {
+    var html = '';
+    var h2 = 0;
+    $('.info-detais>h2,.info-detais>h3,.info-detais>h4').each(function () {
+      h2 = $(this).find('.dropcap').text();
+      var name = '';
+      if ($(this).find('a').length > 0) {
+        name = $(this).find('a').text();
+      } else {
+        var str = $(this).html();
+        name = str.replace(/<[^>]+>/g, '');
+      }
+      if (name == undefined || name == '' || name == null) {
+        return;
+      }
+      $(this).attr('id', $.trim(RemoveUnicode(name)));
+      if ($(this).is('h2')) {
+        if (h2 != '') {
+          html +=
+            '<h5><a href="#' +
+            $.trim(RemoveUnicode(name)) +
+            '">' +
+            h2 +
+            '. ' +
+            name.replace(h2, '') +
+            '</a></h5>';
+        } else {
+          html +=
+            '<h5><a href="#' +
+            $.trim(RemoveUnicode(name)) +
+            '">' +
+            name +
+            '</a></h5>';
+        }
+      }
+      if ($(this).is('h3')) {
+        html +=
+          '<h6><a href="#' +
+          $.trim(RemoveUnicode(name)) +
+          '">&#8226; ' +
+          name +
+          '</a></h6>';
+      }
+    });
+    if (html != '') {
+      $('.table-of-content').html(html).show();
+      $('.bxindexknh').show();
+      $('.bxindexknh .indxtitle').addClass('active');
+    } else {
+      $('.table-of-content').hide();
+      $('.bxindexknh').remove();
+    }
+  }
+  $('.mucluc').click(function () {
+    $('.table-of-content').toggle();
+    $('.bxindexknh .indxtitle').toggleClass('active');
   });
 });
